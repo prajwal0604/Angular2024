@@ -1,0 +1,28 @@
+
+
+<div>
+  <button (click) = "showForm = true">Add User</button>
+</div>
+
+
+<form>
+  [FormGroup] = "form"
+
+  @if(showForm)
+  {
+    <div>
+      <input formControlName = 'name' text = "" placeholder="Name">
+      <input formControlName = 'email' text  = "" placeholder="Email">
+    </div>
+
+    <div>
+      <input formControlName = 'city' text = "" placeholder="City">
+    </div>
+    
+    <button type="submit">Submit</button>
+  }
+
+</form>
+
+
+<pre>{{form.value | json}}</pre>
